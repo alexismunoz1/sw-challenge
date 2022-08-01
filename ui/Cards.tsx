@@ -13,6 +13,7 @@ export const MoviesCard = ({
   director,
   producer,
 }: moviesCardProps) => {
+  // console.log({ title, releaseDate, director, producer });
   return (
     <Card sx={{ minWidth: 275, maxWidth: 300 }}>
       <CardContent>
