@@ -1,7 +1,7 @@
 import { fetchApiGet } from "lib/api";
-import { MovieComp } from "components/movie-comp";
+import { MovieComp, moviesData } from "components/movie-comp";
 
-const MoviePage = ({ data }: any) => {
+const MoviePage = ({ data }: moviesData) => {
   return (
     <div>
       <MovieComp data={data} />
@@ -12,7 +12,7 @@ const MoviePage = ({ data }: any) => {
 export default MoviePage;
 
 export async function getStaticPaths() {
-  const allMoviesId = ["1", "2", "3", "4"];
+  const allMoviesId = ["1", "2", "3", "4", "5", "6"];
 
   return {
     paths: allMoviesId.map((id) => {
@@ -24,7 +24,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps(context: any) {
+export async function getStaticProps(context: { params: { id: string } }) {
   const movieId = context.params.id;
   const data = await fetchApiGet(`films/${movieId}`);
 

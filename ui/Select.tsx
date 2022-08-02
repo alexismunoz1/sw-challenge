@@ -1,6 +1,16 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { SetStateAction } from "react";
 
-export const SelectOptions = ({ handleChange, option }: any) => {
+interface SelectProps {
+  option: string;
+  handleChange: (e: {
+    target: {
+      value: SetStateAction<string>;
+    };
+  }) => void;
+}
+
+export const SelectOptions = ({ option, handleChange }: SelectProps) => {
   return (
     <FormControl fullWidth>
       <InputLabel id="input-label">Sort by</InputLabel>
