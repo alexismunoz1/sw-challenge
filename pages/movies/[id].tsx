@@ -20,7 +20,7 @@ export async function getStaticPaths() {
         params: { id },
       };
     }),
-    fallback: true,
+    fallback: false,
   };
 }
 

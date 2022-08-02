@@ -2,11 +2,11 @@ import { Container, Typography } from "@mui/material";
 
 export interface moviesData {
   data: {
+    title: string;
+    opening_crawl: string;
     director: string;
     producer: string;
-    opening_crawl: string;
     release_date: string;
-    title: string;
   };
 }
 
