@@ -13,16 +13,16 @@ interface SelectProps {
 export const SelectOptions = ({ option, handleChange }: SelectProps) => {
   return (
     <FormControl fullWidth>
-      <InputLabel id="input-label">Sort by</InputLabel>
+      <InputLabel id='input-label'>Sort by</InputLabel>
       <Select
-        labelId="simple-select-label"
-        id="simple-select"
+        labelId='simple-select-label'
+        id='simple-select'
         value={option}
-        label="Sort by"
-        onChange={handleChange}
-      >
+        label='Sort by'
+        onChange={handleChange}>
         <MenuItem value={"title"}>Title</MenuItem>
         <MenuItem value={"release_date"}>Release date</MenuItem>
+        <MenuItem value={"episode_id"}>Chronological order</MenuItem>
         <MenuItem value={"director"}>Director</MenuItem>
         <MenuItem value={"producer"}>Producer</MenuItem>
       </Select>

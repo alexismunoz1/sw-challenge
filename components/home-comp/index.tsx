@@ -37,12 +37,12 @@ export const HomeComp = ({ data }: moviesData) => {
   };
 
   return (
-    <Grid sx={{ flexGrow: 1, padding: 5 }} container justifyContent="center" spacing={3}>
-      <Container maxWidth="sm">
+    <Grid sx={{ flexGrow: 1, padding: 5 }} container justifyContent='center' spacing={3}>
+      <Container maxWidth='sm'>
         <SelectOptions option={option} handleChange={handleChange} />
       </Container>
       <Grid item xs={10}>
-        <Grid container justifyContent="center" spacing={3}>
+        <Grid container justifyContent='center' spacing={3}>
           {movies.map((item) => (
             <Grid key={item.episode_id} item>
               <MoviesCard
