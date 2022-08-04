@@ -24,7 +24,6 @@ export const SelectOptions = ({ option, handleChange }: SelectProps) => {
         <MenuItem value={"release_date"}>Release date</MenuItem>
         <MenuItem value={"episode_id"}>Chronological order</MenuItem>
         <MenuItem value={"director"}>Director</MenuItem>
-        <MenuItem value={"producer"}>Producer</MenuItem>
       </Select>
     </FormControl>
   );

@@ -1,6 +1,6 @@
 import { Container, Grid } from "@mui/material";
 import { useState, SetStateAction } from "react";
-import { MoviesCard } from "ui/Cards";
+import { MoviesCard } from "ui/MovieCards";
 import { SelectOptions } from "ui/Select";
 
 interface movieData {
@@ -37,25 +37,26 @@ export const HomeComp = ({ data }: moviesData) => {
   };
 
   return (
-    <Grid sx={{ flexGrow: 1, padding: 5 }} container justifyContent='center' spacing={3}>
-      <Container maxWidth='sm'>
+    <Grid
+      sx={{ padding: 5, margin: "auto" }}
+      container
+      justifyContent='center'
+      maxWidth='xl'>
+      <Container maxWidth='sm' sx={{ padding: "0" }}>
         <SelectOptions option={option} handleChange={handleChange} />
       </Container>
-      <Grid item xs={10}>
-        <Grid container justifyContent='center' spacing={3}>
-          {movies.map((item) => (
-            <Grid key={item.episode_id} item>
-              <MoviesCard
-                key={item.episode_id}
-                title={item.title}
-                releaseDate={item.release_date}
-                director={item.director}
-                producer={item.producer}
-                movieUrl={item.url}
-              />
-            </Grid>
-          ))}
-        </Grid>
+      <Grid container justifyContent='center'>
+        {movies.map((item) => (
+          <Grid key={item.episode_id} item sx={{ padding: "30px 15px 0 15px" }}>
+            <MoviesCard
+              key={item.episode_id}
+              title={item.title}
+              releaseDate={item.release_date}
+              director={item.director}
+              movieUrl={item.url}
+            />
+          </Grid>
+        ))}
       </Grid>
     </Grid>
   );
