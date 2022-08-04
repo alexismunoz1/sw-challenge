@@ -1,6 +1,6 @@
 import { Container, Grid } from "@mui/material";
 import { useState, SetStateAction } from "react";
-import { MoviesCard } from "ui/MovieCards";
+import { MoviesCard } from "ui/MovieCard";
 import { SelectOptions } from "ui/Select";
 
 interface movieData {
