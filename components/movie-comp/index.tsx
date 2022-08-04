@@ -13,8 +13,6 @@ export interface moviesData {
 }
 
 export const MovieComp = ({ data }: moviesData) => {
-  const urlColl = data.characters;
-
   return (
     <Grid
       sx={{ padding: 5, margin: "auto" }}
@@ -33,12 +31,12 @@ export const MovieComp = ({ data }: moviesData) => {
         <Typography margin={"10px 0"} variant='body1' component='div'>
           {data.opening_crawl}
         </Typography>
-      <Typography variant='h6' component='div'>
-        Characters:
-      </Typography>
+        <Typography variant='h6' component='div'>
+          Characters:
+        </Typography>
       </Container>
       <Grid container justifyContent='center'>
-        {urlColl.map((url, index: number) => (
+        {data.characters.map((url, index: number) => (
           <Grid key={index} item sx={{ padding: "30px 15px 0 15px" }}>
             <CharacterCard characterUrl={url} />
           </Grid>

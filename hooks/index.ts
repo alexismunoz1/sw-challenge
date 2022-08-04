@@ -23,11 +23,7 @@ interface GetCharacterRes {
 export const useGetCharacterData = (
   characterUrl: string
 ): UseQueryResult<GetCharacterRes> => {
-  return useQuery(
-    ["character", characterUrl],
-    () => (characterUrl ? fetchApiByUrl(characterUrl) : null),
-    {
-      staleTime: Infinity,
-    }
-  );
+  return useQuery(["character", characterUrl], () => fetchApiByUrl(characterUrl), {
+    staleTime: Infinity,
+  });
 };

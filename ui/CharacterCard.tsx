@@ -1,10 +1,10 @@
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent, Skeleton, Typography } from "@mui/material";
 import { useGetCharacterData } from "hooks";
 
 export const CharacterCard = ({ characterUrl }: { characterUrl: string }) => {
   const { data: character } = useGetCharacterData(characterUrl);
 
-  return (
+  return character ? (
     <Card
       sx={{
         width: 350,
@@ -25,5 +25,7 @@ export const CharacterCard = ({ characterUrl }: { characterUrl: string }) => {
         </Typography>
       </CardContent>
     </Card>
+  ) : (
+    <Skeleton variant='rectangular' width={350} height={144} />
   );
 };
