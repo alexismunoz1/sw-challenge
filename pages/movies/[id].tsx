@@ -1,10 +1,13 @@
 import { fetchApiGet } from "lib/api";
-import { MovieComp, moviesData } from "components/movie-comp";
+import { moviesData } from "lib/types";
+import { MovieInfo } from "components/movie-info";
+import { MovieCharacters } from "components/movie-characters";
 
 const MoviePage = ({ data }: moviesData) => {
   return (
     <div>
-      <MovieComp data={data} />
+      <MovieInfo data={data} />
+      <MovieCharacters data={data} />
     </div>
   );
 };

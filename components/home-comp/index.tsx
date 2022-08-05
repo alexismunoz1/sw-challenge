@@ -1,6 +1,6 @@
 import { Container, Grid } from "@mui/material";
 import { useState, SetStateAction } from "react";
-import { MoviesCard } from "ui/MovieCard";
+import { MoviesCard } from "components/movie-card";
 import { SelectOptions } from "ui/Select";
 
 interface movieData {
@@ -20,6 +20,7 @@ export interface moviesData {
 
 export const HomeComp = ({ data }: moviesData) => {
   const [movies, setMovies] = useState(data.results);
+  const [option, setOption] = useState("");
 
   const sortByProperty = (property: string, collection: movieData[]) => {
     const sortedMovies = collection.sort((a: any, b: any) => {
@@ -27,8 +28,6 @@ export const HomeComp = ({ data }: moviesData) => {
     });
     setMovies(sortedMovies);
   };
-
-  const [option, setOption] = useState("");
 
   const handleChange = (e: { target: { value: SetStateAction<string> } }) => {
     const selectOption = e.target.value as string;

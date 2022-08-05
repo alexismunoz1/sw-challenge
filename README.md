@@ -1,6 +1,7 @@
 # Star Wars Wiki
 
 ## [DEMO](https://sw-challenge-livid.vercel.app/)
+## [FIGMA](https://www.figma.com/file/RNmHKbOlZOlybiHGkpo0Th/StarWarsStartup?node-id=0%3A1)
 
 ## Getting Started
 
