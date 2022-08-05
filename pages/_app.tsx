@@ -32,7 +32,7 @@ const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
           <Component {...pageProps} />
         </ThemeProvider>
       </CacheProvider>
-      <ReactQueryDevtools initialIsOpen={false} />
+      <ReactQueryDevtools initialIsOpen={true} />
     </QueryClientProvider>
   );
 };
